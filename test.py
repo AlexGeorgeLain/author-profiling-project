@@ -1,10 +1,13 @@
 import tensorflow as tf
 from tensorflow import keras
-import matplotlib.pyplot as plt
 import numpy as np
+import sklearn as sk
+import spacy
+import pandas as pd
 
-(X_train, y_train) , (X_test, y_test) = keras.datasets.mnist.load_data()
+nlp = spacy.load('en_core_web_sm')
 
-print(len(X_train))
 
-print(X_train[0].shape)
+df = pd.read_xml("/Users/alexlain/github/author-profiling-project/0aa7bace-924c-40fb-a2e5-3c7012ede244.xml")
+
+print(df.head())
